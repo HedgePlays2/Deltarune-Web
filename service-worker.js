@@ -1,12 +1,14 @@
 /* DELTARUNE PWA service worker
    Cache only the lightweight app shell. Game data, WASM, chapter files and
    external libraries remain network-loaded to avoid filling device storage. */
-const CACHE_NAME = "deltarune-shell-v2";
+const CACHE_NAME = "deltarune-shell-v3";
 const APP_SHELL = [
   "./",
   "./index.html",
   "./manifest.webmanifest",
-  "./icons/deltarune-app.svg"
+  "./icons/deltarune-app.svg",
+  "./icons/icon-192.png",
+  "./icons/icon-512.png"
 ];
 
 self.addEventListener("install", event => {
